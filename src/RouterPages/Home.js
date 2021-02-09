@@ -22,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "space-between",
     backgroundColor: "#191d24",
+    
   },
   paper: {
     margin: 0,
@@ -75,6 +76,10 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "row",
     justifyContent: "space-around",
     width: "100%",
+    ['@media (min-width:780px)']: { // eslint-disable-line no-useless-computed-key
+      width: '80%'
+    }
+    
   },
   warzoneImg: {
     height: 200,

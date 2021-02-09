@@ -265,50 +265,53 @@ export default function StreamLeaderBoard(props) {
             streamerData[0].data[0].weeklyData.all.properties.matchesPlayed
           )
         );
-        rows.push(
-          createData(
-            "Fontaines",
-            streamerData[1].data[0].weeklyData.all.properties.kills,
-            streamerData[1].data[0].weeklyData.all.properties.deaths,
-            streamerData[1].data[0].weeklyData.all.properties.kdRatio.toFixed(
-              2
-            ),
-            streamerData[1].data[0].weeklyData.all.properties.matchesPlayed
-          )
-        );
-        rows.push(
-          createData(
-            "pieman",
-            streamerData[2].data[0].weeklyData.all.properties.kills,
-            streamerData[2].data[0].weeklyData.all.properties.deaths,
-            streamerData[2].data[0].weeklyData.all.properties.kdRatio.toFixed(
-              2
-            ),
-            streamerData[2].data[0].weeklyData.all.properties.matchesPlayed
-          )
-        );
-        rows.push(
-          createData(
-            "Metaphor",
-            streamerData[3].data[0].weeklyData.all.properties.kills,
-            streamerData[3].data[0].weeklyData.all.properties.deaths,
-            streamerData[3].data[0].weeklyData.all.properties.kdRatio.toFixed(
-              2
-            ),
-            streamerData[3].data[0].weeklyData.all.properties.matchesPlayed
-          )
-        );
-        rows.push(
-          createData(
-            "illest",
-            streamerData[4].data[0].weeklyData.all.properties.kills,
-            streamerData[4].data[0].weeklyData.all.properties.deaths,
-            streamerData[4].data[0].weeklyData.all.properties.kdRatio.toFixed(
-              2
-            ),
-            streamerData[4].data[0].weeklyData.all.properties.matchesPlayed
-          )
-        );
+        if(streamerData[1].data[0].weeklyData) {
+          rows.push(
+            createData(
+              "Fontaines",
+              streamerData[1].data[0].weeklyData.all.properties.kills,
+              streamerData[1].data[0].weeklyData.all.properties.deaths,
+              streamerData[1].data[0].weeklyData.all.properties.kdRatio.toFixed(
+                2
+              ),
+              streamerData[1].data[0].weeklyData.all.properties.matchesPlayed
+            )
+          );
+          rows.push(
+            createData(
+              "pieman",
+              streamerData[2].data[0].weeklyData.all.properties.kills,
+              streamerData[2].data[0].weeklyData.all.properties.deaths,
+              streamerData[2].data[0].weeklyData.all.properties.kdRatio.toFixed(
+                2
+              ),
+              streamerData[2].data[0].weeklyData.all.properties.matchesPlayed
+            )
+          );
+          rows.push(
+            createData(
+              "Metaphor",
+              streamerData[3].data[0].weeklyData.all.properties.kills,
+              streamerData[3].data[0].weeklyData.all.properties.deaths,
+              streamerData[3].data[0].weeklyData.all.properties.kdRatio.toFixed(
+                2
+              ),
+              streamerData[3].data[0].weeklyData.all.properties.matchesPlayed
+            )
+          );
+          rows.push(
+            createData(
+              "illest",
+              streamerData[4].data[0].weeklyData.all.properties.kills,
+              streamerData[4].data[0].weeklyData.all.properties.deaths,
+              streamerData[4].data[0].weeklyData.all.properties.kdRatio.toFixed(
+                2
+              ),
+              streamerData[4].data[0].weeklyData.all.properties.matchesPlayed
+            )
+          );
+        }
+       
       }
       setShowData(true);
     });
